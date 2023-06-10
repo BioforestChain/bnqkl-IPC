@@ -1,9 +1,10 @@
-import * as net from "node:net";
-import * as cluster from "node:cluster";
-import * as crypto from "node:crypto";
+import net from "node:net";
+import cluster from "node:cluster";
+import crypto from "node:crypto";
 import { EventEmitter } from "node:events";
-import * as fs from "node:fs";
-const v8 = require("v8");
+import fs from "node:fs";
+import process from "node:process";
+import v8 from "node:v8";
 import { commonMessageReceiver, commonMessageSender } from "./common.ts";
 
 export type IPC_SERVER_PATH = ReturnType<typeof net.Server.prototype.address>;
@@ -43,10 +44,10 @@ export class IPC_Server extends EventEmitter {
         } else {
           return new Promise<IPC_SERVER_PATH>((resolve, reject) => {
             debug("ask master useable port:%o", {
-              [constants.cmd_key]: constants.ASK_USEABLE_PORT
+              [constants.cmd_key]: constants.ASK_USEABLE_PORT,
             });
             (process.send as any)({
-              [constants.cmd_key]: constants.ASK_USEABLE_PORT
+              [constants.cmd_key]: constants.ASK_USEABLE_PORT,
             });
             setTimeout(() => {
               reject(new Error("get useable_address time out"));
@@ -122,11 +123,11 @@ export class IPC_Server extends EventEmitter {
           this._releaseSockFile();
           this.emit("close");
         });
-        this.server.on("connection", socket => {
+        this.server.on("connection", (socket) => {
           this.customReceiver(socket);
           (socket as any)["send"] = this.send.bind(this, socket);
           this.emit("connection", socket);
-          socket.on("message", msg => {
+          socket.on("message", (msg) => {
             //这里加拦截中间件
             middleware(socket, msg, () => {
               this.emit("message", socket, msg);
@@ -136,7 +137,7 @@ export class IPC_Server extends EventEmitter {
         debug(`IPC Server <${this.uuid}> Started, Sock Path In: %o`, this.path);
       });
       this.server.on("error", reject);
-      this.server.on("error", err => this.emit("error", err));
+      this.server.on("error", (err) => this.emit("error", err));
     });
   }
   send(socket: net.Socket, msg: any) {
