@@ -9,6 +9,7 @@ import { Socket, createConnection, createServer } from "node:net";
 import * as path from "node:path";
 import { debug } from "./constants.ts";
 import { IWCJSONDry } from "./common.ts";
+import process from "node:process";
 
 const superPortServer = <T extends Worker | MessagePort>(port: T) => {
   if (port instanceof MessagePort) {

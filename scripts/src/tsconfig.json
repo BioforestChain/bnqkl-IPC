@@ -5,7 +5,7 @@
         "outDir": "../build/cjs"
     },
     "files": [
-        "worker/@type.ts",
+        "worker/@types.ts",
         "worker/client.ts",
         "worker/common.ts",
         "worker/constants.ts",

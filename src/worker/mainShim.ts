@@ -5,7 +5,7 @@ import {
 } from "node:worker_threads";
 import { cmd_key, constants, debug } from "./constants.ts";
 import { superPort } from "./superPort.ts";
-import EventEmitter = require("events");
+import EventEmitter = require("node:events");
 
 type RegInfo = { port: MessagePort; worker?: Worker };
 class WorkerPortMap {

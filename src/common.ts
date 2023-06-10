@@ -1,5 +1,7 @@
 import * as net from "node:net";
 import { JSONDryFactory } from "npm:@bnqkl/json-dry-factory";
+import { Buffer } from "node:buffer";
+import { setImmediate } from "node:timers";
 export const IPCJSONDry = new JSONDryFactory("gipc");
 /**
  * 粘包分包的处理函数
@@ -18,13 +20,13 @@ export function commonMessageReceiver(socket: NodeJS.EventEmitter) {
       if (chunk.length < Uint32Array.BYTES_PER_ELEMENT) {
         tomsg = {
           length: -1,
-          data: chunk
+          data: chunk,
         };
         return;
       }
       tomsg = {
         length: chunk.readUInt32LE(0),
-        data: Buffer.alloc(0)
+        data: Buffer.alloc(0),
       };
       chunk = chunk.slice(Uint32Array.BYTES_PER_ELEMENT);
     }

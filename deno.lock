@@ -101,12 +101,38 @@
   },
   "npm": {
     "specifiers": {
+      "@bnqkl/json-dry-factory": "@bnqkl/json-dry-factory@1.0.0",
+      "@bnqkl/util-node": "@bnqkl/util-node@1.1.3",
       "@types/node": "@types/node@18.11.18",
       "cluster": "cluster@0.7.7",
       "events": "events@3.3.0",
       "net": "net@1.0.2"
     },
     "packages": {
+      "@bnqkl/json-dry-factory@1.0.0": {
+        "integrity": "sha512-0bDlvG5M3QfbeilwbXsVGSe1TzrscOwfB+8c0itPmkpQTJYGGhOXULiMQAnm1GxdaMd9hdmmrHYus3AchWkmrg==",
+        "dependencies": {
+          "@deno/shim-deno": "@deno/shim-deno@0.16.1"
+        }
+      },
+      "@bnqkl/util-node@1.1.3": {
+        "integrity": "sha512-y2wR/kveWqgJEzdEf2vhhsPcl57wMTrqBHHpkR7BpvgRhObn2VYdk0mEI73Zp/gMzHPz3/Kvedn5SNC4w6P8iA==",
+        "dependencies": {
+          "reflect-metadata": "reflect-metadata@0.1.13",
+          "tslib": "tslib@2.3.1"
+        }
+      },
+      "@deno/shim-deno-test@0.4.0": {
+        "integrity": "sha512-oYWcD7CpERZy/TXMTM9Tgh1HD/POHlbY9WpzmAk+5H8DohcxG415Qws8yLGlim3EaKBT2v3lJv01x4G0BosnaQ==",
+        "dependencies": {}
+      },
+      "@deno/shim-deno@0.16.1": {
+        "integrity": "sha512-s9v0kzF5bm/o9TgdwvsraHx6QNllYrXXmKzgOG2lh4LFXnVMr2gpjK/c/ve6EflQn1MqImcWmVD8HAv5ahuuZQ==",
+        "dependencies": {
+          "@deno/shim-deno-test": "@deno/shim-deno-test@0.4.0",
+          "which": "which@2.0.2"
+        }
+      },
       "@types/node@18.11.18": {
         "integrity": "sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==",
         "dependencies": {}
@@ -172,6 +198,10 @@
           "type": "type@2.7.2"
         }
       },
+      "isexe@2.0.0": {
+        "integrity": "sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==",
+        "dependencies": {}
+      },
       "log@6.3.1": {
         "integrity": "sha512-McG47rJEWOkXTDioZzQNydAVvZNeEkSyLJ1VWkFwfW+o1knW+QSi8D1KjPn/TnctV+q99lkvJNe1f0E1IjfY2A==",
         "dependencies": {
@@ -196,11 +226,19 @@
         "integrity": "sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==",
         "dependencies": {}
       },
+      "reflect-metadata@0.1.13": {
+        "integrity": "sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==",
+        "dependencies": {}
+      },
       "sprintf-kit@2.0.1": {
         "integrity": "sha512-2PNlcs3j5JflQKcg4wpdqpZ+AjhQJ2OZEo34NXDtlB0tIPG84xaaXhpA8XFacFiwjKA4m49UOYG83y3hbMn/gQ==",
         "dependencies": {
           "es5-ext": "es5-ext@0.10.62"
         }
+      },
+      "tslib@2.3.1": {
+        "integrity": "sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==",
+        "dependencies": {}
       },
       "type@1.2.0": {
         "integrity": "sha512-+5nt5AAniqsCnu2cEQQdpzCAh33kVx8n0VoFidKpB1dVVLAN/F+bgVOqOJqOnEnrhp222clB5p3vUlD+1QAnfg==",
@@ -214,6 +252,12 @@
         "integrity": "sha512-WWM3HP+siTxzIWPNUg7hZ4XO8clKi6NoCAJJWnuRL+BAqyFXF8gC03WNyTefGoUXYc47uYgXxpKLIEvo65PEHw==",
         "dependencies": {
           "type": "type@2.7.2"
+        }
+      },
+      "which@2.0.2": {
+        "integrity": "sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==",
+        "dependencies": {
+          "isexe": "isexe@2.0.0"
         }
       }
     }

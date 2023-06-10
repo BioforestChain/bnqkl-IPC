@@ -1,4 +1,4 @@
-import "./@type.ts";
+import "./@types.ts";
 export * from "./client.ts";
 export * from "./common.ts";
 export * from "./mainShim.ts";

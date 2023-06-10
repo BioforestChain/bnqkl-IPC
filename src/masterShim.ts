@@ -1,5 +1,5 @@
-import * as net from "node:net";
-import * as cluster from "node:cluster";
+import net from "node:net";
+import cluster from "node:cluster";
 import type { Worker } from "node:cluster";
 import { constants, debug } from "./constants.ts";
 
