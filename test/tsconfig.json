@@ -1,0 +1,27 @@
+{
+    "extends": "../base.tsconfig.cjs",
+    "compilerOptions": {
+        "composite": false,
+        "sourceMap": false,
+        "declaration": false,
+        "declarationMap": false,
+        "target": "esnext",
+        "rootDir": "./",
+        "outDir": "../build/test"
+    },
+    "files": [
+        "const.ts",
+        "c1.ts",
+        "c2.ts",
+        "JSON.parse-string-vs-buffer.ts",
+        "m.ts",
+        "worker-dirty.test.ts",
+        "worker-socket.test.ts",
+        "worker.test.ts",
+    ],
+    "references": [
+        {
+            "path": "../src"
+        }
+    ]
+}

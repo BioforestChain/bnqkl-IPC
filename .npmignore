@@ -1,0 +1,13 @@
+src
+test
+build/test
+node_modules
+package-lock.json
+tsconfig*
+.*
+base.*
+yarn.*
+yarn-error.log
+tsconfig.tsbuildinfo
+*.code-workspace
+scripts

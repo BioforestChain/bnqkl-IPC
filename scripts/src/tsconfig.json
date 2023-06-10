@@ -1,0 +1,23 @@
+{
+    "extends": "../base.tsconfig.cjs",
+    "compilerOptions": {
+        "rootDir": "./",
+        "outDir": "../build/cjs"
+    },
+    "files": [
+        "worker/@type.ts",
+        "worker/client.ts",
+        "worker/common.ts",
+        "worker/constants.ts",
+        "worker/index.ts",
+        "worker/mainShim.ts",
+        "worker/server.ts",
+        "worker/superPort.ts",
+        "client.ts",
+        "common.ts",
+        "constants.ts",
+        "index.ts",
+        "masterShim.ts",
+        "server.ts"
+    ]
+}

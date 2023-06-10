@@ -1,0 +1,22 @@
+{
+  "name": "@bnqkl/ipc",
+  "version": "1.0.0",
+  "description": "and simple ipc for nodejs.",
+  "main": "./build/cjs/index.js",
+  "types": "build/cjs/index.d.ts",
+  "scripts": {
+    "clear": "clear -p build",
+    "dev:all": "tsc --build tsconfig.all.json -w",
+    "dev": "tsc --build -w",
+    "build:cjs": "tsc --build",
+    "build": "tsc --build tsconfig.all.json",
+    "rebuild": "npm run clear & npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BioforestChain/bnqkl-IPC.git"
+  },
+  "keywords": [],
+  "author": "BFMeta Team",
+  "license": "cc-by-4.0"
+}

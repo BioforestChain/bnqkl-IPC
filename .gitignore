@@ -1,0 +1,16 @@
+build
+node_modules
+package-lock.json
+*.tsbuildinfo
+src/**/.*
+.vscode
+.cache
+.idea
+.project
+.settings
+yarn*
+.*
+!.gitignore
+!.npmignore
+*.code-workspace
+npm
